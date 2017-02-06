@@ -2,25 +2,73 @@
 <html lang="en">
   <head>
     <title>Order List</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        .zq{
+            text-align: left;
+            font-family: "Arial","Microsoft YaHei",sans-serif;
+            line-height: 1.1;
+            margin: 10px 120px;
+            color: forestgreen;
+        }
+        .table1 {
+            width: 400px;
+        }
+        .head {
+            background-color: #005f3c;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.24);
+            font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Microsoft Yahei,sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+
+        }
+        tr{
+            display: flex;
+        }
+        .head th {
+            display: block;
+            padding: 10px;
+            color: #9dccb6;
+            white-space: nowrap;
+            line-height: 1;
+            flex-direction: column;
+            justify-content: space-around;
+            border: 1px solid whitesmoke;
+        }
+        .body {
+            justify-content: space-around;
+        }
+        .body td {
+            width: 110px;
+        }
+    </style>
   </head>
 
   <body>
-    <h1>Order List</h1>
+    <h1 class="zq">下单队列</h1>
 
-    <table id="order-list">
-      <tr> <th>Number</th> <th>Side</th> <th>Quantity</th> <th>Price</th> </tr>
+    <table class="table table1 table-bordered" id="order-list">
+
+    <tr class="head"> <th>单号(number)</th> <th>买(bid)/卖(ask)</th> <th>数量(quantity)</th> <th>价格(price)）</th> </tr>
       <tbody>
-        <tr v-for="order in orders">
-          <td>{{ order.number }}</td>
-          <td>{{ order.side }}</td>
-          <td>{{ order.quantity }}</td>
-          <td>{{ order.price }}</td>
-        </tr>
+      <tr class="body" v-for="orderB in orders_onOrder">
+        <td>{{ orderB.number }}</td>
+        <td>{{ orderB.side }}</td>
+        <td>{{ orderB.quantity }}</td>
+        <td>{{ orderB.price }}</td>
+      </tr>
       </tbody>
+
     </table>
+
 
     <!--------------------------------- Scripts ------------------------------------------>
     <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/vue.min.js"></script>
     <script src="orders.js"></script>
   </body>
