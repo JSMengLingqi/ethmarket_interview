@@ -7,15 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
-        .zq{
+        .list{
             text-align: left;
             font-family: "Arial","Microsoft YaHei",sans-serif;
             line-height: 1.1;
             margin: 10px 120px;
             color: forestgreen;
         }
-        .table1 {
-            width: 400px;
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          border: 1px solid #c0c0c0;
+        }
+        th,td {
+          border: 1px solid #d0d0d0;
+          color: #404060;
+          padding: 10px;
+        }
+        section {
+            position: relative;
+        }
+        section tr {
+            display: flex;
+        }
+        section .table1 {
+            float: left;
+            width: 430px;
+            padding: 13px;
+        }
+        section .table2 {
+            float: left;
+            width: 430px;
+            position: absolute;
+            left:600px;
+            top: 49px;
+        }
+        section .table3 {
+          float: left;
+          width: 430px;
+          left: 580px;
+          top: 900px;
+          position: absolute;
+
+        }
+
+        .dealList {
+          position: absolute;
+          left: 650px;
+          top: -9px;
         }
         .head {
             background-color: #005f3c;
@@ -24,47 +63,94 @@
             font-size: 14px;
             line-height: 1.5;
             color: #333;
-
         }
         tr{
             display: flex;
         }
-        .head th {
+        th {
             display: block;
             padding: 10px;
             color: #9dccb6;
             white-space: nowrap;
             line-height: 1;
-            flex-direction: column;
-            justify-content: space-around;
             border: 1px solid whitesmoke;
         }
-        .body {
-            justify-content: space-around;
+        .body{
+            justify-content:space-around;
+            font-size: 14px;
+            line-height: 1.5;
         }
-        .body td {
-            width: 110px;
+
+        tr td {
+          width: 107px;
+          height: 35px;
         }
+
     </style>
   </head>
 
   <body>
-    <h1 class="zq">下单队列</h1>
-
-    <table class="table table1 table-bordered" id="order-list">
-
-    <tr class="head"> <th>单号(number)</th> <th>买(bid)/卖(ask)</th> <th>数量(quantity)</th> <th>价格(price)）</th> </tr>
-      <tbody>
-      <tr class="body" v-for="orderB in orders_onOrder">
-        <td>{{ orderB.number }}</td>
-        <td>{{ orderB.side }}</td>
-        <td>{{ orderB.quantity }}</td>
-        <td>{{ orderB.price }}</td>
-      </tr>
-      </tbody>
-
-    </table>
-
+    <section id="order-list" class="section">
+      <table class="table table1 table-bordered">
+        <h1 class="list">下单队列</h1>
+        <tr class="head">
+          <th>单号(number)</th>
+          <th>买(bid)/卖(ask)</th>
+          <th>数量(quantity)</th>
+          <th>价格(price )</th>
+        </tr>
+        <tbody>
+          <tr class="body" v-for="orderO in orders_onOrder">
+            <td>{{ orderO.number }}</td>
+            <td>{{ orderO.side }}</td>
+            <td>{{ orderO.quantity }}</td>
+            <td>{{ orderO.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table table2 table-bordered">
+        <h1 class="list dealList">订单</h1>
+        <tr class="head">
+          <th>单号(number)</th>
+          <th>买(bid)/卖(ask)</th>
+          <th>数量(quantity)</th>
+          <th>价格(price)</th>
+          <th>详细信息(item)</th>
+        </tr>
+        <tbody>
+          <tr class="body order1" v-for="orderD in orders_aDeal">
+            <td>{{ orderD.ask.number }}</td>
+            <td>{{ orderD.ask.side }}</td>
+            <td>{{ orderD.ask.quantity }}</td>
+            <td>{{ orderD.ask.price }}</td>
+            <td>
+              <button type="button" id="item">items</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table3 table-bordered" id="show">
+        <h1 class="list dealList">订单</h1>
+        <tr class="head">
+          <th>对手方.单号(number)</th>
+          <th>对手方.买(bid)/卖(ask)</th>
+          <th>对手方.数量(quantity)</th>
+          <th>对手方.价格(price)</th>
+          <th>成交数量</th>
+          <th>成交价格</th>
+        </tr>
+        <tbody>
+        <tr class="body" v-for="orderD in orders_aDeal">
+          <td>{{ orderD.ds.bid.number }}</td>
+          <td>{{ orderD.ds.bid.side }}</td>
+          <td>{{ orderD.ds.bid.quantity }}</td>
+          <td>{{ orderD.ds.bid.price }}</td>
+          <td>{{ orderD.ds.count }}</td>
+          <td>{{ orderD.ds.cjPrice }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </section>
 
     <!--------------------------------- Scripts ------------------------------------------>
     <script src="js/jquery.min.js"></script>
@@ -72,4 +158,12 @@
     <script src="js/vue.min.js"></script>
     <script src="orders.js"></script>
   </body>
+  <script>
+      $(document).ready(function () {
+          $("#item").click(function () {
+              $("#show").show();
+          });
+      });
+  </script>
 </html>
+
