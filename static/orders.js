@@ -67,7 +67,7 @@ var ordersVue = new Vue({
                             writable: true,
                             value: 0
                         });
-                        Object.defineProperty(bidArray[i], 'id', {
+                        /*Object.defineProperty(bidArray[i], 'id', {
                             enumerable: true,
                             configurable: true,
                             writable: true,
@@ -78,8 +78,8 @@ var ordersVue = new Vue({
                             configurable: true,
                             writable: true,
                             value: 0
-                        });
-                        bidArray[i].id = i++;
+                        });*/
+                        //bidArray[i].id = i++;
                         for (var j = 0; j < escAskArray.length; j++) {
 
                             if(bidArray[i].originQuantity-bidArray[i].quantity<0)
@@ -88,7 +88,7 @@ var ordersVue = new Vue({
                             }
                             if (escAskArray[j].quantity == 0) continue;
                             if (bidArray[i].quantity == 0) continue outer;
-                            escAskArray[i].id = bidArray[i].id;
+                            //escAskArray[i].id = bidArray[i].id;
                             if (bidArray[i].price >= escAskArray[j].price) {
                                 // 计算订单成交价格
                                 var cPrice = (bidArray[i].price + escAskArray[j].price) / 2;
