@@ -1,0 +1,97 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-class-constructor-call/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-dynamic-import/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/static/orders.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-trailing-function-commas/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-builder-binary-assignment-operator-visitor/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/static/orders_es6.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-decorators/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-remap-async-to-generator/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-do-expressions/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-remap-async-to-generator/lib/for-await.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-react-display-name/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-builder-react-jsx/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-async-generator-functions/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-stage-0/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-flow/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-react/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-function-bind/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-react-jsx/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-react-jsx-source/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-do-expressions/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-explode-class/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-decorators/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-stage-3/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-flow-strip-types/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-async-functions/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-function-bind/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-react-jsx-self/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-async-generators/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-async-to-generator/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-export-extensions/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-class-properties/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-bindify-decorators/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-exponentiation-operator/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-class-properties/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-stage-1/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-object-rest-spread/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-stage-2/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-export-extensions/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-exponentiation-operator/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-class-constructor-call/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-explode-assignable-expression/lib/index.js" />
+        <item url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-jsx/lib/index.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-class-constructor-call/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-dynamic-import/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/static/orders.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-trailing-function-commas/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-builder-binary-assignment-operator-visitor/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/static/orders_es6.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-decorators/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-remap-async-to-generator/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-do-expressions/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-remap-async-to-generator/lib/for-await.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-react-display-name/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-builder-react-jsx/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-async-generator-functions/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-stage-0/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-flow/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-react/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-function-bind/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-react-jsx/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-react-jsx-source/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-do-expressions/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-explode-class/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-decorators/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-stage-3/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-flow-strip-types/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-async-functions/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-function-bind/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-react-jsx-self/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-object-rest-spread/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-async-generators/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-async-to-generator/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-export-extensions/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-class-properties/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-bindify-decorators/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-exponentiation-operator/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-class-properties/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-stage-1/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-object-rest-spread/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-preset-stage-2/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-export-extensions/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-transform-exponentiation-operator/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-class-constructor-call/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-helper-explode-assignable-expression/lib/index.js" />
+      <root url="file://$PROJECT_DIR$/dist/node_modules/babel-plugin-syntax-jsx/lib/index.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

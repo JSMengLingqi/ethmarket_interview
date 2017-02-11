@@ -20,6 +20,7 @@
           border: 1px solid #c0c0c0;
         }
         th,td {
+          min-width : 120px;
           border: 1px solid #d0d0d0;
           color: #404060;
           padding: 10px;
@@ -48,6 +49,7 @@
           left: 580px;
           top: 900px;
           position: absolute;
+          display: none;
 
         }
 
@@ -93,13 +95,14 @@
     <section id="order-list" class="section">
       <table class="table table1 table-bordered">
         <h1 class="list">下单队列</h1>
+        <tbody>
         <tr class="head">
           <th>单号(number)</th>
           <th>买(bid)/卖(ask)</th>
           <th>数量(quantity)</th>
           <th>价格(price )</th>
         </tr>
-        <tbody>
+
           <tr class="body" v-for="orderO in orders_onOrder">
             <td>{{ orderO.number }}</td>
             <td>{{ orderO.side }}</td>
@@ -110,6 +113,7 @@
       </table>
       <table class="table table2 table-bordered">
         <h1 class="list dealList">订单</h1>
+        <tbody>
         <tr class="head">
           <th>单号(number)</th>
           <th>买(bid)/卖(ask)</th>
@@ -117,20 +121,21 @@
           <th>价格(price)</th>
           <th>详细信息(item)</th>
         </tr>
-        <tbody>
-          <tr class="body order1" v-for="orderD in orders_aDeal">
+
+          <tr class="body order1 " id="button" v-for="orderD in orders_aDeal">
             <td>{{ orderD.ask.number }}</td>
             <td>{{ orderD.ask.side }}</td>
             <td>{{ orderD.ask.quantity }}</td>
             <td>{{ orderD.ask.price }}</td>
-            <td>
-              <button type="button" id="item">items</button>
+            <td id="item_parent" style="text-align: center;cursor:pointer;background: darkgrey;">
+              <span id="item" style="font-weight:bold;">items</span>
             </td>
           </tr>
         </tbody>
       </table>
       <table class="table3 table-bordered" id="show">
         <h1 class="list dealList">订单</h1>
+        <tbody>
         <tr class="head">
           <th>对手方.单号(number)</th>
           <th>对手方.买(bid)/卖(ask)</th>
@@ -139,7 +144,7 @@
           <th>成交数量</th>
           <th>成交价格</th>
         </tr>
-        <tbody>
+
         <tr class="body" v-for="orderD in orders_aDeal">
           <td>{{ orderD.ds.bid.number }}</td>
           <td>{{ orderD.ds.bid.side }}</td>
@@ -157,13 +162,21 @@
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/vue.min.js"></script>
     <script src="orders.js"></script>
+    <script>
+        $(function(){
+
+
+            $("#item_parent").bind("click",function (){
+                console.log('dianji');
+                $("#show").show();
+            });
+            $("#button:nth-child(5)").bind("click",function (){
+                $("#show").show();
+            });
+
+        });
+    </script>
   </body>
-  <script>
-      $(document).ready(function () {
-          $("#item").click(function () {
-              $("#show").show();
-          });
-      });
-  </script>
+
 </html>
 
