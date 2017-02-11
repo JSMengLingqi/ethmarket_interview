@@ -23,7 +23,7 @@ var ordersVue = new Vue({
                 dataType: "json",
                 data: {
                     "start": "0",
-                    "size": "20"
+                    "size": "110"
                 },
                 success: function success(resp) {
                     //console.log(resp);
@@ -61,17 +61,41 @@ var ordersVue = new Vue({
                     // 对手单数组 : rival[]
                     var rival = new Array();
                     outer: for (var i = 0; i < bidArray.length; i++) {
+                        Object.defineProperty(bidArray[i], 'originQuantity', {
+                            enumerable: true,
+                            configurable: true,
+                            writable: true,
+                            value: 0
+                        });
+                        Object.defineProperty(bidArray[i], 'id', {
+                            enumerable: true,
+                            configurable: true,
+                            writable: true,
+                            value: 0
+                        });
+                        Object.defineProperty(escAskArray[i], 'id', {
+                            enumerable: true,
+                            configurable: true,
+                            writable: true,
+                            value: 0
+                        });
+                        bidArray[i].id = i++;
                         for (var j = 0; j < escAskArray.length; j++) {
-                            //console.log(bidArray[0]);
+
+                            if(bidArray[i].originQuantity-bidArray[i].quantity<0)
+                            {
+                                bidArray[i].originQuantity =  bidArray[i].quantity;
+                            }
                             if (escAskArray[j].quantity == 0) continue;
                             if (bidArray[i].quantity == 0) continue outer;
+                            escAskArray[i].id = bidArray[i].id;
                             if (bidArray[i].price >= escAskArray[j].price) {
                                 // 计算订单成交价格
                                 var cPrice = (bidArray[i].price + escAskArray[j].price) / 2;
                                 if (bidArray[i].quantity >= escAskArray[j].quantity) {
                                     // 对手方临时数组
                                     var rivalTem1 = {
-                                        bid: bidArray[j],
+                                        bid: bidArray[i],
                                         count: bidArray[i].quantity,
                                         cjPrice: cPrice
                                     };
@@ -87,13 +111,11 @@ var ordersVue = new Vue({
                                     escAskArray[j].quantity = escAskArray[j].quantity - bidArray[i].quantity;
                                 }
                             }
-
                             // 成交队列中应该放的数据 : aDeal (订单/对手方)
                             var aDeal = {
                                 ask: escAskArray[j],
                                 ds: rival[j]
                             };
-                            //console.log(aDeal.ds.count);
                             // 将所有计算好的数据放入成交队列(orderForm)中
                             orderForm.push(aDeal);
                         }
@@ -102,7 +124,6 @@ var ordersVue = new Vue({
                     // 只显示最新的30条数据
                     if (orderForm.length > 30) {
                         self.orders_aDeal = orderForm.slice(0, 29);
-                        //clearInterval(self.fetchOrders);
                     }
                 },
                 error: function error(jqXHR, exception) {

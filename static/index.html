@@ -46,11 +46,9 @@
         section .table3 {
           float: left;
           width: 430px;
-          left: 580px;
-          top: 900px;
+          left: 280px;
+          top: 1900px;
           position: absolute;
-          display: none;
-
         }
 
         .dealList {
@@ -148,7 +146,7 @@
         <tr class="body" v-for="orderD in orders_aDeal">
           <td>{{ orderD.ds.bid.number }}</td>
           <td>{{ orderD.ds.bid.side }}</td>
-          <td>{{ orderD.ds.bid.quantity }}</td>
+          <td>{{ orderD.ds.bid.originQuantity }}</td>
           <td>{{ orderD.ds.bid.price }}</td>
           <td>{{ orderD.ds.count }}</td>
           <td>{{ orderD.ds.cjPrice }}</td>
@@ -170,7 +168,7 @@
                 console.log('dianji');
                 $("#show").show();
             });
-            $("#button:nth-child(5)").bind("click",function (){
+            $("#item").bind("click",function (){
                 $("#show").show();
             });
 
